@@ -3,82 +3,110 @@ import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
 import DefaultPage from "../pages/dashboard/DefaultPage";
 import DashboardIndex from "../pages/dashboard/DashboardIndex";
-import ChangelogPage from "../pages/changelog/ChangelogPage";
 import AnalyticsPage from "../pages/dashboard/AnalyticsPage";
 import SaasPage from "../pages/dashboard/SaasPage";
 import ComponentPageLayout from "../pages/component/ComponentPageLayout";
-import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
-import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
-import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
-import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import AlertPage from "../pages/component/AlertPage";
 import ButtonPage from "../pages/component/ButtonPage";
-import InstallationPage from "../pages/installation/InstallationPage";
-import DocumentationPage from "../pages/documentation/DocumentationPage";
+import DashboardMainPage from "../pages/dashboardmain/DashboardMainPage";
+import PhoneCall from "../pages/phonecall/PhoneCall";
+import DataTraffic from "../pages/datatraffic/DataTraffic";
+import Support from "../pages/support/Support";
+import MapView from "../pages/mapview/MapView";
+import ManageTeamPage from "../pages/latency/ManageTeamPage";
+import InvoicesBalances from "../pages/contact/InvoicesBalances";
+import ContactInformationPage from "../pages/contact/ContactInformation";
+
+// Icon
+import HomeIcon from "@mui/icons-material/Home";
+import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
+import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
+import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
+import PhoneIcon from "@mui/icons-material/Phone";
+import SupportIcon from "@mui/icons-material/Support";
+import MapIcon from "@mui/icons-material/Map";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
 const appRoutes: RouteType[] = [
   {
     index: true,
     element: <HomePage />,
-    state: "home"
+    state: "home",
   },
   {
-    path: "/installation",
-    element: <InstallationPage />,
-    state: "installation",
+    path: "/dashboard-main",
+    element: <DashboardMainPage />,
+    state: "dashboard-main",
     sidebarProps: {
-      displayText: "Installation",
-      icon: <FileDownloadOutlinedIcon />
-    }
+      displayText: "Dashboard Main",
+      icon: <HomeIcon />,
+    },
   },
   {
-    path: "/dashboard",
+    path: "/signalandquality",
     element: <DashboardPageLayout />,
-    state: "dashboard",
+    state: "signalandquality",
     sidebarProps: {
-      displayText: "Dashboard",
-      icon: <DashboardOutlinedIcon />
+      displayText: "Signal & Quality",
+      icon: <SignalCellularAltIcon />,
     },
     child: [
       {
         index: true,
         element: <DashboardIndex />,
-        state: "dashboard.index"
+        state: "signalandquality.index",
       },
       {
-        path: "/dashboard/default",
+        path: "/signalandquality/default",
         element: <DefaultPage />,
-        state: "dashboard.default",
+        state: "signalandquality.default",
         sidebarProps: {
-          displayText: "Default"
+          displayText: "Average signal level",
         },
       },
       {
-        path: "/dashboard/analytics",
+        path: "/signalandquality/analytics",
         element: <AnalyticsPage />,
-        state: "dashboard.analytics",
+        state: "signalandquality.analytics",
         sidebarProps: {
-          displayText: "Analytic"
-        }
+          displayText: "Analytic",
+        },
       },
       {
-        path: "/dashboard/saas",
+        path: "/signalandquality/saas",
         element: <SaasPage />,
-        state: "dashboard.saas",
+        state: "signalandquality.saas",
         sidebarProps: {
-          displayText: "Saas"
-        }
-      }
-    ]
+          displayText: "Saas",
+        },
+      },
+    ],
+  },
+  {
+    path: "/phone-call",
+    element: <PhoneCall />,
+    state: "phone-call",
+    sidebarProps: {
+      displayText: "Phone Call",
+      icon: <PhoneIcon />,
+    },
+  },
+  {
+    path: "/data-traffic",
+    element: <DataTraffic />,
+    state: "data-traffic",
+    sidebarProps: {
+      displayText: "Data Traffic",
+      icon: <ArticleOutlinedIcon />,
+    },
   },
   {
     path: "/component",
     element: <ComponentPageLayout />,
     state: "component",
     sidebarProps: {
-      displayText: "Components",
-      icon: <AppsOutlinedIcon />
+      displayText: "Latency",
+      icon: <AppsOutlinedIcon />,
     },
     child: [
       {
@@ -86,7 +114,7 @@ const appRoutes: RouteType[] = [
         element: <AlertPage />,
         state: "component.alert",
         sidebarProps: {
-          displayText: "Alert"
+          displayText: "Alert",
         },
       },
       {
@@ -94,29 +122,64 @@ const appRoutes: RouteType[] = [
         element: <ButtonPage />,
         state: "component.button",
         sidebarProps: {
-          displayText: "Button"
-        }
-      }
-    ]
+          displayText: "Button",
+        },
+      },
+    ],
   },
   {
-    path: "/documentation",
-    element: <DocumentationPage />,
-    state: "documentation",
+    path: "/contact",
+    element: <ComponentPageLayout />,
+    state: "contact",
     sidebarProps: {
-      displayText: "Documentation",
-      icon: <ArticleOutlinedIcon />
-    }
+      displayText: "Contact",
+      icon: <SupportAgentIcon />,
+    },
+    child: [
+      {
+        path: "/contact/manage-team",
+        element: <ManageTeamPage />,
+        state: "contact.manage-team",
+        sidebarProps: {
+          displayText: "Manage Team",
+        },
+      },
+      {
+        path: "/contact/contact-information",
+        element: <ContactInformationPage />,
+        state: "contact.contact-information",
+        sidebarProps: {
+          displayText: "Contact Information",
+        },
+      },
+      {
+        path: "/contact/invoices-balances",
+        element: <InvoicesBalances />,
+        state: "contact.invoices-balances",
+        sidebarProps: {
+          displayText: "Invoices Balances",
+        },
+      },
+    ],
   },
   {
-    path: "/changelog",
-    element: <ChangelogPage />,
-    state: "changelog",
+    path: "/map-view",
+    element: <MapView />,
+    state: "map-view",
     sidebarProps: {
-      displayText: "Changelog",
-      icon: <FormatListBulletedOutlinedIcon />
-    }
-  }
+      displayText: "Map View",
+      icon: <MapIcon />,
+    },
+  },
+  {
+    path: "/support",
+    element: <Support />,
+    state: "support",
+    sidebarProps: {
+      displayText: "Support",
+      icon: <SupportIcon />,
+    },
+  },
 ];
 
 export default appRoutes;
