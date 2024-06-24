@@ -61,7 +61,7 @@ const appRoutes: RouteType[] = [
         element: <DefaultPage />,
         state: "signalandquality.default",
         sidebarProps: {
-          displayText: "Average signal level",
+          displayText: "Average Signal Level",
         },
       },
       {
