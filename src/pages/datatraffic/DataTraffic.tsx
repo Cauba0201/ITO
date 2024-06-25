@@ -65,16 +65,13 @@ const DataTraffic = (props: Props) => {
     },
   ];
   return (
-    <Box>
+    <Box m="20px">
       <Header
         title="Contact Information"
         subtitle="List of contacts for Future Reference"
       />
-      <Box>
-        <DataGrid
-          rows={mockDataContacts}
-          columns={columns}
-        />
+      <Box m="40px 0 0 0" height="75vh">
+        <DataGrid rows={mockDataContacts} columns={columns} />
       </Box>
     </Box>
   );
