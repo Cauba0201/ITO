@@ -1,10 +1,15 @@
-import React from 'react';
+import { Box } from "@mui/material";
+import BarChart from "../../components/common/BarChart";
+import Header from "../../components/common/Header";
 
-type Props = {};
-
-const AnalyticsPage = (props: Props) => {
+const AnalyticsPage = ({ isDashboard = false }) => {
   return (
-    <div>AnalyticsPage</div>
+    <Box m="20px">
+      <Header title="Barchart" subtitle="Simple bar chart" />
+      <Box height="75vh">
+        <BarChart />
+      </Box>
+    </Box>
   );
 };
 

@@ -1,10 +1,15 @@
-import React from 'react';
+import { Box } from "@mui/material";
+import Header from "../../components/common/Header";
+import LineChart from "../../components/common/LineChart";
 
-type Props = {};
-
-const SaasPage = (props: Props) => {
+const SaasPage = () => {
   return (
-    <div>SaasPage</div>
+    <Box m="20px">
+      <Header title="Line Chart" subtitle="Simple line chart"/>
+      <Box height="75vh">
+        <LineChart/>
+      </Box>
+    </Box>
   );
 };
 

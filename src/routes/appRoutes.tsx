@@ -6,14 +6,14 @@ import DashboardIndex from "../pages/dashboard/DashboardIndex";
 import AnalyticsPage from "../pages/dashboard/AnalyticsPage";
 import SaasPage from "../pages/dashboard/SaasPage";
 import ComponentPageLayout from "../pages/component/ComponentPageLayout";
-import AlertPage from "../pages/component/AlertPage";
-import ButtonPage from "../pages/component/ButtonPage";
+import AlertPage from "../pages/latency/AlertPage";
+import ButtonPage from "../pages/latency/ButtonPage";
 import DashboardMainPage from "../pages/dashboardmain/DashboardMainPage";
 import PhoneCall from "../pages/phonecall/PhoneCall";
 import DataTraffic from "../pages/datatraffic/DataTraffic";
 import Support from "../pages/support/Support";
 import MapView from "../pages/mapview/MapView";
-import ManageTeamPage from "../pages/latency/ManageTeamPage";
+import ManageTeamPage from "../pages/latency/ButtonPage";
 import InvoicesBalances from "../pages/contact/InvoicesBalances";
 import ContactInformationPage from "../pages/contact/ContactInformation";
 
