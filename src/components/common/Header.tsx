@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, InputBase, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 
 type HeaderProps = {
@@ -10,7 +10,7 @@ const Header = ({ title, subtitle }: HeaderProps) => {
   const theme = useTheme();
   const color = tokens(theme.palette.mode);
   return (
-    <Box mb="30px">
+    <Box mb="20px">
       <Typography
         variant="h4"
         color={color.grey[100]}
@@ -22,6 +22,7 @@ const Header = ({ title, subtitle }: HeaderProps) => {
       <Typography variant="h6" color={color.grey[400]}>
         {subtitle}
       </Typography>
+      
     </Box>
   );
 };

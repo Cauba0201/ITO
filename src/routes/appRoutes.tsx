@@ -1,5 +1,4 @@
 import DashboardPageLayout from "../pages/dashboard/DashboardPageLayout";
-import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
 import DefaultPage from "../pages/dashboard/DefaultPage";
 import DashboardIndex from "../pages/dashboard/DashboardIndex";
@@ -30,7 +29,7 @@ import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 const appRoutes: RouteType[] = [
   {
     index: true,
-    element: <HomePage />,
+    element: <DashboardMainPage />,
     state: "home",
   },
   {

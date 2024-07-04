@@ -4,7 +4,7 @@ import Header from "../../components/common/Header";
 
 const AnalyticsPage = ({ isDashboard = false }) => {
   return (
-    <Box m="20px">
+    <Box m="0px 20px">
       <Header title="Barchart" subtitle="Simple bar chart" />
       <Box height="75vh">
         <BarChart />

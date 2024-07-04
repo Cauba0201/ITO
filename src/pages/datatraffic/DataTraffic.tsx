@@ -65,7 +65,7 @@ const DataTraffic = (props: Props) => {
     },
   ];
   return (
-    <Box m="20px">
+    <Box m="0px 20px">
       <Header
         title="Contact Information"
         subtitle="List of contacts for Future Reference"

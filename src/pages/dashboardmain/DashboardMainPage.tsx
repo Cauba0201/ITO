@@ -9,7 +9,6 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import LineChart from "../../components/common/LineChart";
 import BarChart from "../../components/common/BarChart";
-import PieChart from "../../components/common/PieChart";
 import Progress from "../../components/common/ProgressChart";
 import StatBox from "../../components/common/StatBox";
 import { mockTransactions } from "../../data/mockData";
@@ -22,7 +21,7 @@ const DashboardMainPage = (props: Props) => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="20px">
+    <Box m="0px 20px">
       {/* phan header */}
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Header title="Dashboard" subtitle="Welcome to dashboard" />
@@ -250,7 +249,7 @@ const DashboardMainPage = (props: Props) => {
             alignItems="center"
             mt="25px"
           >
-            <Progress progress={0} size={125} />
+            <Progress progress={0.75} size={125} />
             <Typography
               variant="h5"
               color={colors.greenAccent[500]}

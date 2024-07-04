@@ -9,7 +9,7 @@ const AlertPage = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <Box m="20px">
+    <Box m="0px 20px">
       <Header title="Progress Chart" subtitle="Simple chart" />
       <Box
         height="75vh"

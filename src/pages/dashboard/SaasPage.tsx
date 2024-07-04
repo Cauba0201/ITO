@@ -4,7 +4,7 @@ import LineChart from "../../components/common/LineChart";
 
 const SaasPage = () => {
   return (
-    <Box m="20px">
+    <Box m="0px 20px">
       <Header title="Line Chart" subtitle="Simple line chart"/>
       <Box height="75vh">
         <LineChart/>
